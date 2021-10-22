@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.dropbox.com/s/pde63ygngm7n1nw/quiz_icon.ico?dl=true"
+        type="image/x-icon">
+    <title>Add Question</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- my css -->
+    <link rel="stylesheet" href="css/addData.css">
+</head>
+
+<body class=" blue-grey lighten-4">
+    <!-- preloader start -->
+    <div id="loader"></div>
+    <!-- preloader start -->
+
+    <!-- insert question box start -->
+    <main id="insertData-box" class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="card ">
+                    <form id="addForm">
+                        <div class="card-content">
+                            <p id="user"></p>
+                            <button class="btn waves-effect waves-light light-green accent-3 black-text" type="submit"
+                                id="logout">Logout
+                                <i class="material-icons right">logout</i>
+                            </button>
+                            <h5 class="card-title center-align">Add Question</h5>
+                            <p class="light-blue-text darken-1-text" id="msg"></p>
+                            <div class="input-field">
+                                <i class="material-icons prefix">code</i>
+                                <textarea id="code" class="materialize-textarea white-text blue-grey darken-2"
+                                    placeholder="Enter code here" required></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="table">
+                                        <option value="0" disabled selected>Choose your option</option>
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="js">JAVASCRIPT</option>
+                                        <option value="java">JAVA</option>
+                                        <option value="c">C</option>
+                                        <option value="cpp">C++</option>
+                                    </select>
+                                    <label>Select Language</label>
+                                </div>
+                                <div class="input-field col s9">
+                                    <i class="material-icons prefix">list</i>
+                                    <input id="option" type="number" class="validate black-text"
+                                        placeholder="How many option" min="2" required>
+                                </div>
+                                <div class="col s3">
+                                    <a class="btn-floating btn-large waves-effect waves-light red" id="btn-option"><i
+                                            class="material-icons">add</i></a>
+                                </div>
+                            </div>
+                            <div class="row hide" id="option-list"></div>
+                        </div>
+                        <div class="card-action center-align">
+                            <div id="addBtngrp">
+                                <button class="btn waves-effect waves-light light-green accent-3 black-text"
+                                    type="submit" id="addData">Add questions
+                                    <i class="material-icons right">add</i>
+                                </button>
+                                <button class="btn waves-effect waves-light grey" type="reset">Reset
+                                    <i class="material-icons right">clear</i>
+                                </button>
+                            </div>
+                            <!-- loader default hide -->
+                            <div class="progress hide" id="loading">
+                                <div class="indeterminate"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- insert question box end -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- my script -->
+    <script src="./js/addData.js" type="module"></script>
+
+</body>
+
+</html>
