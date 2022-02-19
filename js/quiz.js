@@ -9,8 +9,15 @@ let score = 0;
 let count = 0;
 let randomQues;
 let questionbox = document.getElementById("code");
+
 M.Modal.init(document.getElementById("ruleModel"));
 let scoreModel = M.Modal.init(document.getElementById("scoreModel"));
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+
 // submit button
 document.getElementById("submitAns").addEventListener("click", checkAns);
 
