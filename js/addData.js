@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // if user not login
 onAuthStateChanged(auth, (user) => {
-    if (!user) {
-        window.location = "login.html";
-    }
-    else {
+    if (user && user.providerData[0].providerId.localeCompare("password") === 0) {
+
         document.getElementById("user").innerHTML = user.email;
         // preloader remove
         document.getElementById("loader").remove();
+    }
+    else {
+        window.location = "login.html";
     }
 });
 
