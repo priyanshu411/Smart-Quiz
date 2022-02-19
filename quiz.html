@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="kCDVcuxyzkBYdU26j5Vnq3eA8VK18hZ3DJPYQTYL2Dg" />
     <meta name="description"
         content="Quiz web application where you can play java ,html ,css ,js etc quiz and test your skills. Developed by Priyanshu Gupta">
     <meta name="keywords" content="smart quiz,java,c,cpp,c++,html,css,js,firebase,quiz,programming quiz">
-    
+
     <!--   open graph for preview website   -->
     <meta property="og:title" content="Smart Quiz">
     <meta property="og:url" content="https://smart-quiz.netlify.app/">
     <meta property="og:description"
         content="Quiz application where you can play java ,html ,css ,js etc quiz and test your skills">
-    <meta property="og:image" content="https://raw.githubusercontent.com/priyanshu411/Smart-Quiz/1409cb04c73970d9610dab0f35366fc105dbcf98/images/Smart-quiz.png">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/priyanshu411/Smart-Quiz/1409cb04c73970d9610dab0f35366fc105dbcf98/images/Smart-quiz.png">
 
     <title>Quiz APP</title>
     <link rel="shortcut icon" href="https://www.dropbox.com/s/pde63ygngm7n1nw/quiz_icon.ico?dl=true"
@@ -34,10 +34,39 @@
     <div id="loader"></div>
     <!-- preloader end -->
 
+
+    <!-- navbar start  -->
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#" class="brand-logo light-green-text text-accent-3">Smart Quiz</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger black-text"><i
+                    class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                <li class="img"><img class="img-user" src="" alt=""></li>
+                <li class="user-name black-text"></li>
+                <li><a class="black-text logout">logout<i class="material-icons left">logout</i>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <img class="circle img-user" src=""></a>
+                <span class="blue-grey-text text-darken-2 name user-name"></span>
+            </div>
+        </li>
+        <li>
+            <a class="blue-grey-text text-darken-2 logout">logout<i class="material-icons left">logout</i></a>
+        </li>
+    </ul>
+
+    <!-- navbar end  -->
+
     <!-- select language start -->
     <main id="main">
-        <h2 class="center-align light-green-text text-accent-3">Smart Quiz <i
-                class="fas fa-brain motion pink-text text-lighten-2"></i></h2>
         <div class="row">
             <div class="col s12 m6 l4">
                 <div class="my-card z-depth-3">
@@ -148,7 +177,8 @@
             <div class="col s12 m10 l8 xl6 offset-m1 offset-l2  offset-xl3">
                 <div class="card  blue-grey darken-2">
                     <div class="card-content white-text">
-                        <span class="card-title center-align light-green-text text-accent-3" id="time">Card Title</span>
+                        <span class="card-title center-align light-green-text text-accent-3" id="time">Card
+                            Title</span>
                         <pre><code id="code"></code></pre>
                     </div>
                     <div class="card-action grey lighten-2">
@@ -204,22 +234,21 @@
     <!-- footer start -->
     <footer class="page-footer  deep-orange lighten-1">
         <div class="container">
-          <div class="row">
-            <div class="col s12 m6">
-             <h5 class="white-text center-align">About</h5>
-                    <h6 class="grey-text text-lighten-4"><i class="fas fa-user"></i>&nbsp;&nbsp;PRIYANSHU GUPTA</h6>
+            <div class="row">
+                <div class="col s12 m12">
+                    <h5 class="white-text center-align">About</h5>
+                    <h6><i class="fas fa-user"></i>&nbsp;&nbsp;PRIYANSHU
+                        GUPTA</h6>
                     <h6><i class="fab fa-instagram"></i>&nbsp;&nbsp;<a class="white-text"
                             href="https://www.instagram.com/__priyanshu_gupta?r=nametag" target="_blank">
-                            __priyanshu_gupta</a></h6><br>
+                            __priyanshu_gupta</a></h6>
+                    <h6><i class="fas fa-globe"></i>&nbsp;&nbsp;<a class="white-text"
+                            href="https://priyanshu-gupta.netlify.app/" target="_blank">
+                            priyanshu-gupta.netlify.app</a></h6><br>
+                </div>
             </div>
-            <div class="col s12 m6">
-                <h5 class="white-text center-align">Links</h5>
-                <h6><i class="fas fa-user-shield"></i>&nbsp;&nbsp;<a class="white-text" href="login.html"
-                    target="_blank">Admin Login</a></h6><br>
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
     <!-- footer end -->
 
     <!-- Compiled and minified JavaScript -->
