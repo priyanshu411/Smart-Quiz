@@ -7,9 +7,20 @@
     z-index: 100;
     top: 0;
 }
+nav .nav-wrapper{
+    padding: 0 2.5rem;
+}
+.img{
+    line-height: 0;
+}
+.img img{
+    width: 50px;
+    margin: 7px;
+    border-radius: 50%;
+}
 #main{
     width: 90%;
-    margin: auto;
+    margin: 3rem auto;
 }
 #question{
     transform: translateY(10px);
@@ -70,17 +81,7 @@ code{
     margin: 1rem 0;
     background-color: white;
 }
-.motion{
-    animation: motion .4s linear infinite alternate;
-}
-@keyframes motion {
-    0%{
-        transform: rotate(20deg);
-    }
-    100%{
-        transform: rotate(-20deg);
-    }
-}
+
 .p-a{
     padding: 0.4rem;
 }
