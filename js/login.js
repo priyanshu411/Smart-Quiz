@@ -7,7 +7,8 @@ document.getElementById("forget-pass").addEventListener("click", forgetPass);
 
 // if user not login
 onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (user && user.providerData[0].providerId.localeCompare("password") === 0) {
+
         window.location = "addData.html";
     }
     else {
