@@ -5,7 +5,6 @@ import { GoogleAuthProvider ,getAuth,signInWithPopup, onAuthStateChanged } from 
 const provider = new GoogleAuthProvider(app);
 const auth = getAuth(app);
 document.getElementById("login").addEventListener("click",loginWithGoogle);
-console.log(app);
 window.onload = removePreloader;
 
 

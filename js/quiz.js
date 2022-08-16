@@ -1,28 +1,32 @@
+import { addEntityCode } from './utility.js';
 // variable
 let flag = true;
 let time = 30;
 let setI;
 let queObj = null;
 let maxIdObj = {};
+window.maxIdObj = maxIdObj;
 let scoreHistory = [];
 let score = 0;
 let count = 0;
 let randomQues;
 let questionbox = document.getElementById("code");
-
+let repArr = [/>/g, /</g], repWithArr = ["&gt;", "&lt;"];
+window.startQuiz = startQuiz;
 M.Modal.init(document.getElementById("ruleModel"));
 let scoreModel = M.Modal.init(document.getElementById("scoreModel"));
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-  });
+document.addEventListener('DOMContentLoaded', function () {
+    let elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+});
 
 // submit button
 document.getElementById("submitAns").addEventListener("click", checkAns);
 
 // start quiz
 async function startQuiz(obj) {
+    window.scrollTo(0, 0);
     obj.disabled = true;
     obj.innerHTML = ` <div class="preloader-wrapper small active">
     <div class="spinner-layer spinner-green-only">
@@ -88,7 +92,7 @@ function showAnswer() {
         let pre = document.createElement("pre");
         pre.classList.add("blue-grey", "darken-2", "white-text", "p-a")
         let code = document.createElement("code");
-        code.innerHTML = data.que; //create text node work
+        code.innerHTML = addEntityCode(data.que, repArr, repWithArr); //create text node work & replace html to entity code
         pre.appendChild(code);
         let p = document.createElement("p");
         p.appendChild(document.createTextNode("Answer :" + data.option[data.ans - 1]));
@@ -105,7 +109,9 @@ function nextQue() {
     if (count < queObj.docs.length) {
         let queData = queObj.docs[count].data();
         questionbox.innerHTML = "";
-        questionbox.innerHTML = queData.que;
+        
+        // replace html with entity code;
+        questionbox.innerHTML = addEntityCode(queData.que, repArr, repWithArr);
         createRadio(queData.option, "optionBox");
         setTime();
     }
