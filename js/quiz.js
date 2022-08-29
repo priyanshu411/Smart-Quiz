@@ -14,7 +14,7 @@ let questionbox = document.getElementById("code");
 let repArr = [/>/g, /</g], repWithArr = ["&gt;", "&lt;"];
 window.startQuiz = startQuiz;
 M.Modal.init(document.getElementById("ruleModel"));
-let scoreModel = M.Modal.init(document.getElementById("scoreModel"));
+let scoreModel = M.Modal.init(document.getElementById("scoreModel"),{dismissible:true});
 
 document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.sidenav');
